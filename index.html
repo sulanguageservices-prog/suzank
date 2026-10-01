@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suzan K. | Korean–English Interpreter &amp; Life/Career Coach</title>
+  <meta name="description" content="Korean–English interpreter and life/career coach. Book a session, read about my translated books, and follow my blog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="logo">Suzan K.</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#books">Books</a>
+        <a href="#blog">Blog</a>
+        <a href="#book" class="btn btn-small">Book a session</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">Interpreter &middot; Translator &middot; Coach</p>
+          <h1>Bridging languages,<br><em>guiding your next chapter.</em></h1>
+          <p class="lead">I'm a Korean–English interpreter and life &amp; career coach. Whether you need clear communication across languages or a thoughtful partner to figure out what's next, you're in good hands.</p>
+          <div class="hero-actions">
+            <a href="#book" class="btn">Book a session</a>
+            <a href="#about" class="btn btn-ghost">Meet me</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <!-- Replace images/profile.jpg with your own photo -->
+          <img src="images/profile.jpg" alt="Portrait of Suzan K." width="440" height="540"
+               onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'photo-placeholder',textContent:'Add your photo'}))">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container narrow">
+        <h2>About me</h2>
+        <p>Hello, I'm Suzan. I grew up between Korean and English, and I've spent more than 20 years helping people understand each other, in business meetings, courtrooms, clinics, publishing, and everyday life.</p>
+        <p>As a coach, I bring the same listening-first approach: I help people navigate career transitions, life in a new country, and big decisions with clarity and kindness.</p>
+        <ul class="facts">
+          <li><strong>Languages</strong><span>Korean (한국어) &amp; English</span></li>
+          <li><strong>Interpreting</strong><span>Consecutive, simultaneous, whispered, remote</span></li>
+          <li><strong>Coaching</strong><span>Life transitions, career growth, bilingual identity</span></li>
+          <li><strong>Credentials</strong><span>[Your certifications &amp; education]</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section alt" id="services">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Interpreting</h3>
+            <p>Professional Korean–English interpreting for meetings, events, medical and legal appointments, in person or online.</p>
+          </article>
+          <article class="card">
+            <h3>Life Coaching</h3>
+            <p>Gentle, practical sessions to help you find direction, build confidence, and make changes that stick.</p>
+          </article>
+          <article class="card">
+            <h3>Career Coaching</h3>
+            <p>Resume and interview prep, career pivots, and working across cultures, in English or Korean.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="books">
+      <div class="container">
+        <h2>Books I've translated</h2>
+        <p class="section-intro">A selection of Korean works brought into English.</p>
+        <div class="books" id="books-list"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="blog">
+      <div class="container">
+        <h2>Blog</h2>
+        <p class="section-intro">Notes on language, culture, and finding your way.</p>
+        <div class="cards" id="blog-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="book">
+      <div class="container narrow">
+        <h2>Book a session</h2>
+        <p class="section-intro">Tell me what you need and when suits you. I'll confirm by email within one business day, and you'll get a copy of your request right away.</p>
+
+        <form id="booking-form" class="form" novalidate>
+          <div class="row">
+            <label>Name
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Email
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+          </div>
+          <div class="row">
+            <label>Service
+              <select name="service" required>
+                <option value="">Choose…</option>
+                <option>Interpreting</option>
+                <option>Life coaching</option>
+                <option>Career coaching</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>Format
+              <select name="format" required>
+                <option>Online (video call)</option>
+                <option>In person</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label>Preferred date
+              <input type="date" name="date" required>
+            </label>
+            <label>Preferred time
+              <input type="time" name="time" required>
+            </label>
+          </div>
+          <label>Your time zone
+            <input type="text" name="timezone" required placeholder="e.g. Asia/Seoul">
+          </label>
+          <label>Anything you'd like me to know?
+            <textarea name="message" rows="4"></textarea>
+          </label>
+          <!-- Honeypot for spam bots -->
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
+          <button type="submit" class="btn">Request booking</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Suzan K. &middot; <a href="mailto:hello@example.com">hello@example.com</a></p>
+    </div>
+  </footer>
+
+  <dialog id="post-dialog">
+    <article>
+      <button class="close" aria-label="Close">&times;</button>
+      <h3 id="post-title"></h3>
+      <p class="meta" id="post-meta"></p>
+      <div id="post-body"></div>
+    </article>
+  </dialog>
+
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

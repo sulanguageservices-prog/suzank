@@ -1,8 +1,8 @@
 // Edit this file to update books and blog posts. Body text is plain paragraphs separated by blank lines.
 
 const BOOKS = [
-  { title: "Book Title One", author: "Original Author", year: 2022, publisher: "Publisher", cover: "images/book1.jpg", link: "" },
-  { title: "Book Title Two", author: "Original Author", year: 2020, publisher: "Publisher", cover: "images/book2.jpg", link: "" },
+  { title: "Book Title One", author: "Original Author", year: 2022, publisher: "Publisher", cover: "images/book1.jpg", link: "https://product.kyobobook.co.kr/detail/S000219337123" },
+  { title: "Book Title Two", author: "Original Author", year: 2020, publisher: "Publisher", cover: "images/book2.jpg", link: "https://product.kyobobook.co.kr/detail/S000219740765" },
   { title: "Book Title Three", author: "Original Author", year: 2018, publisher: "Publisher", cover: "images/book3.jpg", link: "" }
 ];
 

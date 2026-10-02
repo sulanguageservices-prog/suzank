@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interpreting inquiry | Suzan K.</title>
+  <meta name="description" content="Request Korean–English interpreting. Share a few details and I'll reply by email with availability and a quote.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Suzan K.</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="translation-inquiry.html" class="btn btn-small">Translation inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Interpreting inquiry</p>
+        <h1>Tell me about your assignment.</h1>
+        <p class="lead">Share a few details so I can review availability, preparation needs, and a quote. I aim to respond by email within 48 hours.</p>
+        <p class="small">An inquiry does not confirm a booking. For urgent requests, choose "Rush" and include your required timing.</p>
+
+        <form id="inquiry-form" class="form" data-kind="interpreting" novalidate>
+          <h3>Your contact details</h3>
+          <div class="row">
+            <label>Your name *
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Email *
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+          </div>
+          <div class="row">
+            <label>Organization / agency
+              <input type="text" name="organization" autocomplete="organization">
+            </label>
+            <label>Phone (optional)
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+          </div>
+          <div class="row">
+            <label>Is this a rush request? *
+              <select name="rush" required>
+                <option>No — standard timing</option>
+                <option>Yes — rush request</option>
+              </select>
+            </label>
+            <label>Language direction *
+              <select name="direction" required>
+                <option>Both directions (English ↔ Korean)</option>
+                <option>English → Korean</option>
+                <option>Korean → English</option>
+                <option>Other — describe below</option>
+              </select>
+            </label>
+          </div>
+
+          <h3>Interpreting assignment</h3>
+          <div class="row">
+            <label>Assignment date *
+              <input type="date" name="date" required>
+            </label>
+            <label>Start time *
+              <input type="time" name="start" required>
+            </label>
+          </div>
+          <div class="row">
+            <label>Assignment time zone *
+              <input type="text" name="timezone" class="tz" required placeholder="e.g. Asia/Seoul">
+            </label>
+            <label>Expected duration (hours) *
+              <input type="number" name="duration" min="0.5" step="0.5" required>
+            </label>
+          </div>
+          <div class="row">
+            <label>Category *
+              <select name="category" required>
+                <option>Medical</option>
+                <option>Legal</option>
+                <option>Community</option>
+                <option>Business</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Delivery mode *
+              <select name="mode" required>
+                <option>In person</option>
+                <option>VRI — video remote interpreting</option>
+                <option>OPI — over-the-phone interpreting</option>
+                <option>Zoom / online meeting</option>
+                <option>Other / not sure</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label>Interpreting style *
+              <select name="style" required>
+                <option>Consecutive — speakers take turns</option>
+                <option>Simultaneous — interpreting while the speaker talks</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </label>
+            <label>Venue / city or online platform
+              <input type="text" name="venue">
+            </label>
+          </div>
+          <div class="row">
+            <label>Approximate number of participants
+              <input type="number" name="participants" min="1">
+            </label>
+            <label>Required credentials / court authorization (if any)
+              <input type="text" name="credentials">
+            </label>
+          </div>
+          <label>Assignment details: setting, topics, participants, preparation needs *
+            <textarea name="details" rows="5" required></textarea>
+          </label>
+          <p class="small">For legal work, specify discovery, a deposition, a court hearing, a lawyer consultation, or another setting. For medical work, describe the appointment type or specialty without patient identifiers. Include any equipment or recording requirements.</p>
+
+          <div class="note">
+            <h3>Confidentiality starts with your inquiry.</h3>
+            <p>Please send a general description first, without patient names, identification numbers, or detailed private case information. We can agree on a secure way to share documents and preparation materials after the initial conversation.</p>
+          </div>
+
+          <p class="small">This form prepares an email to <strong>work@suzankim.com</strong>. Your email app will open; please review the message and press Send there. Nothing is sent until you do.</p>
+          <button type="submit" class="btn">Prepare my inquiry email</button>
+          <p id="form-status" role="status"></p>
+        </form>
+
+        <div id="draft" class="draft" hidden>
+          <h3>Your inquiry: review or copy</h3>
+          <pre id="draft-text"></pre>
+          <div class="hero-actions">
+            <a id="mailto-link" class="btn" href="#">Open in my email app</a>
+            <button type="button" id="copy-draft" class="btn btn-ghost">Copy inquiry</button>
+          </div>
+          <p class="small">If your email app doesn't open, copy the text into an email to <a href="mailto:work@suzankim.com">work@suzankim.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Suzan K. &middot; <a href="mailto:work@suzankim.com">work@suzankim.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/inquiry.js"></script>
+</body>
+</html>

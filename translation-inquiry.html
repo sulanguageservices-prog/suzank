@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Translation inquiry | Suzan K.</title>
+  <meta name="description" content="Request Korean–English translation. Share a few details and I'll reply by email with timing and a quote.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="logo">Suzan K.</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav-links" class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#services">Services</a>
+        <a href="coaching.html">Coaching</a>
+        <a href="interpreting-inquiry.html" class="btn btn-small">Interpreting inquiry</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container narrow">
+        <p class="eyebrow">Translation inquiry</p>
+        <h1>Tell me about your project.</h1>
+        <p class="lead">Share a few details so I can review timing, preparation needs, and a quote. I aim to respond by email within 48 hours.</p>
+        <p class="small">An inquiry does not confirm a booking or deadline. For urgent requests, choose "Rush" and include your required timing.</p>
+
+        <form id="inquiry-form" class="form" data-kind="translation" novalidate>
+          <h3>Your contact details</h3>
+          <div class="row">
+            <label>Your name *
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>Email *
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+          </div>
+          <div class="row">
+            <label>Organization / agency
+              <input type="text" name="organization" autocomplete="organization">
+            </label>
+            <label>Phone (optional)
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+          </div>
+          <div class="row">
+            <label>Is this a rush request? *
+              <select name="rush" required>
+                <option>No — standard timing</option>
+                <option>Yes — rush request</option>
+              </select>
+            </label>
+            <label>Language direction *
+              <select name="direction" required>
+                <option>English → Korean</option>
+                <option>Korean → English</option>
+                <option>Both directions (English ↔ Korean)</option>
+                <option>Other — describe below</option>
+              </select>
+            </label>
+          </div>
+
+          <h3>Translation project</h3>
+          <div class="row">
+            <label>Project type *
+              <select name="type" required>
+                <option>Book</option>
+                <option>Medical records / charts</option>
+                <option>Legal documents</option>
+                <option>Statements</option>
+                <option>Machine translation post-editing</option>
+                <option>Video / audio transcription</option>
+                <option>Game translation / localization</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>Certification / notarization requirements
+              <select name="certification">
+                <option>Not required</option>
+                <option>Certified translation requested</option>
+                <option>Notarization requested</option>
+                <option>Not sure — please advise</option>
+              </select>
+            </label>
+          </div>
+          <div class="row">
+            <label>Required deadline (date &amp; time) *
+              <input type="datetime-local" name="deadline" required>
+            </label>
+            <label>Deadline time zone *
+              <input type="text" name="timezone" class="tz" required placeholder="e.g. Asia/Seoul">
+            </label>
+          </div>
+          <div class="row">
+            <label>Approximate words, pages, or recording minutes
+              <input type="text" name="volume">
+            </label>
+            <label>Source &amp; desired delivery formats
+              <input type="text" name="formats" placeholder="e.g. PDF in, Word out">
+            </label>
+          </div>
+          <label>Project details: purpose, audience, subject, special instructions *
+            <textarea name="details" rows="5" required></textarea>
+          </label>
+
+          <div class="note">
+            <h3>Confidentiality starts with your inquiry.</h3>
+            <p>Please send a general description first, without patient names, identification numbers, or detailed private case information. We can agree on a secure way to share documents after the initial conversation.</p>
+          </div>
+
+          <p class="small">This form prepares an email to <strong>work@suzankim.com</strong>. Your email app will open; please review the message and press Send there. Nothing is sent until you do.</p>
+          <button type="submit" class="btn">Prepare my inquiry email</button>
+          <p id="form-status" role="status"></p>
+        </form>
+
+        <div id="draft" class="draft" hidden>
+          <h3>Your inquiry: review or copy</h3>
+          <pre id="draft-text"></pre>
+          <div class="hero-actions">
+            <a id="mailto-link" class="btn" href="#">Open in my email app</a>
+            <button type="button" id="copy-draft" class="btn btn-ghost">Copy inquiry</button>
+          </div>
+          <p class="small">If your email app doesn't open, copy the text into an email to <a href="mailto:work@suzankim.com">work@suzankim.com</a>.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Suzan K. &middot; <a href="mailto:work@suzankim.com">work@suzankim.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/inquiry.js"></script>
+</body>
+</html>

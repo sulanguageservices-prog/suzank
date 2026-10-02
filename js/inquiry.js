@@ -16,6 +16,7 @@ links.addEventListener("click", (e) => {
   }
 });
 
+const { t } = window.i18n;
 const form = $("#inquiry-form");
 const status = $("#form-status");
 const draft = $("#draft");
@@ -38,7 +39,7 @@ form.addEventListener("submit", (e) => {
   if (!form.checkValidity()) {
     form.reportValidity();
     status.className = "err";
-    status.textContent = "Please fill in the required fields marked with *.";
+    status.textContent = t("Please fill in the required fields marked with *.");
     return;
   }
   status.textContent = "";
@@ -50,10 +51,12 @@ form.addEventListener("submit", (e) => {
     lines.push(`${labelOf(field)}:\n${field.value.trim()}`);
   });
 
-  const body = `Hello Suzan,\n\nI'd like to make a ${kind} inquiry.\n\n${lines.join("\n\n")}\n\nThank you,\n${name}`;
-  const subject = `${kind[0].toUpperCase()}${kind.slice(1)} inquiry from ${name}`;
+  const kindTitle = `${kind[0].toUpperCase()}${kind.slice(1)} inquiry`;
+  const intro = kind === "interpreting" ? "I'd like to make an interpreting inquiry." : "I'd like to make a translation inquiry.";
+  const body = `${t("Hello Suzan,")}\n\n${t(intro)}\n\n${lines.join("\n\n")}\n\n${t("Thank you,")}\n${name}`;
+  const subject = window.i18n.lang === "ko" ? `${t(kindTitle)} – ${name}` : `${kindTitle} from ${name}`;
 
-  $("#draft-text").textContent = `To: ${WORK_EMAIL}\nSubject: ${subject}\n\n${body}`;
+  $("#draft-text").textContent = `${t("To:")} ${WORK_EMAIL}\n${t("Subject:")} ${subject}\n\n${body}`;
   $("#mailto-link").href = `mailto:${WORK_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   draft.hidden = false;
   draft.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -62,8 +65,15 @@ form.addEventListener("submit", (e) => {
 $("#copy-draft").addEventListener("click", async (e) => {
   try {
     await navigator.clipboard.writeText($("#draft-text").textContent);
-    e.target.textContent = "Copied";
+    e.target.textContent = t("Copied");
   } catch {
-    e.target.textContent = "Select the text above to copy";
+    e.target.textContent = t("Select the text above to copy");
   }
+});
+
+// A draft written in the previous language would be stale.
+document.addEventListener("sitelanguagechange", () => {
+  status.textContent = "";
+  draft.hidden = true;
+  $("#copy-draft").textContent = t("Copy inquiry");
 });

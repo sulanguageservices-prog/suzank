@@ -166,6 +166,22 @@ textarea { resize: vertical; }
 /* Footer */
 .site-footer { background: var(--sage-900); color: var(--sage-100); padding: 2rem 0; text-align: center; }
 .site-footer a { color: var(--sage-200); }
+.social { display: flex; justify-content: center; align-items: flex-start; gap: .8rem; margin-bottom: 1rem; }
+.social-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 42px; height: 42px; border-radius: 50%;
+  border: 1px solid var(--sage-500); color: var(--sage-100) !important;
+  cursor: pointer; list-style: none; transition: background .15s;
+}
+.social-icon:hover, .social-icon:focus-visible { background: var(--sage-700); }
+.kakao { position: relative; }
+.kakao summary::-webkit-details-marker { display: none; }
+.kakao-id {
+  position: absolute; bottom: 52px; left: 50%; transform: translateX(-50%);
+  white-space: nowrap; background: var(--cream); color: var(--text);
+  padding: .5rem .9rem; border-radius: var(--radius); font-size: .9rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,.25);
+}
 
 /* Mobile */
 @media (max-width: 760px) {

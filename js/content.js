@@ -1,9 +1,8 @@
 // Edit this file to update books and blog posts. Body text is plain paragraphs separated by blank lines.
 
 const BOOKS = [
-  { title: "Book Title One", author: "Original Author", year: 2022, publisher: "Publisher", cover: "images/book1.jpg", link: "https://product.kyobobook.co.kr/detail/S000219337123" },
-  { title: "Book Title Two", author: "Original Author", year: 2020, publisher: "Publisher", cover: "images/book2.jpg", link: "https://product.kyobobook.co.kr/detail/S000219740765" },
-  { title: "Book Title Three", author: "Original Author", year: 2018, publisher: "Publisher", cover: "images/book3.jpg", link: "" }
+  { title: "Entrepreneurship: The Practice and Mindset (3rd Edition)", author: "Heidi M. Neck, Christopher P. Neck & Emma L. Murray", year: 2026, publisher: "Coaching Books", cover: "images/book1.jpg", coachingbooks: "https://coachingbooks.co.kr/good/product_view?goodNum=205632120", kyobo: "https://product.kyobobook.co.kr/detail/S000219337123" },
+  { title: "Ecological and Climate-Conscious Coaching", author: "Alison Whybrow, Eve Turner, Josie McLean & Peter Hawkins", year: 2026, publisher: "Coaching Books", cover: "images/book2.jpg", coachingbooks: "https://coachingbooks.co.kr/good/product_view?goodNum=205654926", kyobo: "https://product.kyobobook.co.kr/detail/S000219740765" }
 ];
 
 const POSTS = [

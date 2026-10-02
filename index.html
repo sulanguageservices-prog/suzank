@@ -58,7 +58,7 @@
           <li><strong>Languages</strong><span>Korean (한국어) &amp; English</span></li>
           <li><strong>Interpreting</strong><span>Consecutive, simultaneous, whispered, remote</span></li>
           <li><strong>Coaching</strong><span>Life transitions, career growth, bilingual identity</span></li>
-          <li><strong>Credentials</strong><span>[Your certifications &amp; education]</span></li>
+          <li><strong>Credentials</strong><span>CMI-Korean, KAC Certified Coach, SuccessFinder Debriefer, Birkman Debriefer/Facilitator &amp; DTW Facilitator]</span></li>
         </ul>
       </div>
     </section>
@@ -102,53 +102,11 @@
     <section class="section" id="book">
       <div class="container narrow">
         <h2>Book a session</h2>
-        <p class="section-intro">Tell me what you need and when suits you. I'll confirm by email within one business day, and you'll get a copy of your request right away.</p>
+        <p class="section-intro">Pick a time that suits you. You'll receive a confirmation email with the details straight away.</p>
 
-        <form id="booking-form" class="form" novalidate>
-          <div class="row">
-            <label>Name
-              <input type="text" name="name" required autocomplete="name">
-            </label>
-            <label>Email
-              <input type="email" name="email" required autocomplete="email">
-            </label>
-          </div>
-          <div class="row">
-            <label>Service
-              <select name="service" required>
-                <option value="">Choose…</option>
-                <option>Interpreting</option>
-                <option>Life coaching</option>
-                <option>Career coaching</option>
-                <option>Not sure yet</option>
-              </select>
-            </label>
-            <label>Format
-              <select name="format" required>
-                <option>Online (video call)</option>
-                <option>In person</option>
-              </select>
-            </label>
-          </div>
-          <div class="row">
-            <label>Preferred date
-              <input type="date" name="date" required>
-            </label>
-            <label>Preferred time
-              <input type="time" name="time" required>
-            </label>
-          </div>
-          <label>Your time zone
-            <input type="text" name="timezone" required placeholder="e.g. Asia/Seoul">
-          </label>
-          <label>Anything you'd like me to know?
-            <textarea name="message" rows="4"></textarea>
-          </label>
-          <!-- Honeypot for spam bots -->
-          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true">
-          <button type="submit" class="btn">Request booking</button>
-          <p id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <!-- Replace the data-url below with your own Calendly link -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_USERNAME?hide_gdpr_banner=1&primary_color=4f6354" style="min-width:320px;height:700px;"></div>
+        <p class="calendly-fallback"><a href="https://calendly.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">Open the booking page in a new tab</a></p>
       </div>
     </section>
   </main>
@@ -170,5 +128,6 @@
 
   <script src="js/content.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>

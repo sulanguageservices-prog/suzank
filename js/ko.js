@@ -33,10 +33,10 @@ window.KO_DICT = {
   "Languages": "언어",
   "Korean (한국어) & English": "한국어 & 영어",
   "Interpreting": "통역",
-  "Medical, legal, and general documents of all kinds": "의료, 법률 및 각종 일반 문서 전반",
+  "Medical, legal, business, educational, and general document translation": "의료, 법률, 비즈니스, 교육 및 일반 문서 번역",
   "Consecutive, simultaneous, whispered, remote": "순차통역, 동시통역, 위스퍼링 통역, 원격 통역",
   "Life transitions, career growth, bilingual identity": "삶의 전환기, 커리어 성장, 이중언어 정체성",
-  "CMI-Korean, KAC Certified Coach, SuccessFinder Debriefer, Birkman Debriefer/Facilitator & DTW Facilitator": "CMI-Korean, KAC 인증 코치, SuccessFinder 디브리퍼, Birkman 디브리퍼/퍼실리테이터 및 DTW 퍼실리테이터",
+  ", KAC Certified Coach, SuccessFinder Debriefer, Birkman Debriefer/Facilitator & DTW Facilitator": ", KAC 인증 코치, SuccessFinder 디브리퍼, Birkman 디브리퍼/퍼실리테이터 및 DTW 퍼실리테이터",
 
   "Professional Korean–English interpreting for meetings, events, medical and legal appointments, in person or online.": "회의, 행사, 의료 및 법률 상담을 위한 전문 한영 통역을 대면 또는 온라인으로 제공합니다.",
   "Send a work inquiry": "업무 문의하기",
@@ -146,7 +146,8 @@ window.KO_DICT = {
   "Climate": "기후",
   "Co-lead, Korean-language community pod, Climate Coaching Alliance": "Climate Coaching Alliance 한국어 커뮤니티 Pod 공동 리드",
   "Medical, legal, and general document translation, with accuracy, confidentiality, and attention to context": "의료, 법률 및 각종 일반 문서 번역 — 정확성과 비밀 보장, 맥락에 대한 세심한 배려를 바탕으로 합니다",
-  "Certified Medical Interpreter (CMI-Korean); legal, IT, and business settings": "공인 의료통역사(CMI-Korean); 법률, IT, 비즈니스 분야",
+  "Certified Medical Interpreter (": "공인 의료통역사(",
+  "); legal, IT, and business settings": "); 법률, IT, 비즈니스 분야",
   "Specialities": "전문 분야",
   "Life transitions, career growth, working across cultures, bilingual identity": "삶의 전환기, 커리어 성장, 문화 간 협업, 이중언어 정체성",
 
